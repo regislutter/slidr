@@ -1,0 +1,154 @@
+@import './variables';
+
+body, html {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', sans-serif;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    &.orientation-row {
+        flex-direction: row;
+    }
+}
+
+header {
+    &.orientation-column {
+        margin-bottom: 15px;
+
+        .logo {
+            margin-right: 15px;
+        }
+
+    }
+
+    &.orientation-row {
+        margin-right: 15px;
+
+        .logo {
+            margin-bottom: 15px;
+        }
+    }
+
+    .flex-container {
+        display: flex;
+        flex-direction: row;
+        z-index: 100;
+
+        &.orientation-row {
+            flex-direction: column;
+        }
+    }
+
+    .btn {
+        display: block;
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        padding: 0;
+        border-radius: 0;
+        text-align: center;
+    }
+}
+
+.btn {
+    padding: 10px 30px;
+    color: $white;
+    background-color: $blue;
+    border: 1px solid $navy;
+    border-radius: 3px;
+
+    &.active {
+        background-color: $red;
+    }
+
+    &-success {
+        background-color: $green;
+        border-color: $olive;
+    }
+    &-cancel {
+        color: $red;
+        background-color: transparent;
+        border-color: $gray;
+    }
+}
+
+/** Transition animations */
+.appear {
+    &-enter {
+        opacity: 0;
+
+        &.appear-enter-active {
+            opacity: 1;
+            transition: opacity ease-out 500ms;
+        }
+    }
+
+    &-leave {
+        opacity: 1;
+
+        &.appear-leave-active {
+            opacity: 0;
+            transition: opacity ease-out 500ms;
+        }
+    }
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-top: 100px;
+    width: 100vw;
+    height: 100vh;
+}
+
+$transitionDuration: 500ms;
+.swipe {
+    &-leave {
+        transform: translate3d(0, 0, 0);
+
+        &.swipe-leave-active {
+            transform: translate3d(-100%, 0, 0);
+            transition: transform ease-out $transitionDuration;
+        }
+    }
+
+    &-enter {
+        transform: translate3d(100%, 0, 0);
+
+        &.swipe-enter-active {
+            transform: translate3d(0, 0, 0);
+            transition: transform ease-out $transitionDuration;
+        }
+    }
+}
+
+.reverseSwipe {
+    &-leave {
+        transform: translate3d(0, 0, 0);
+
+        &.reverseSwipe-leave-active {
+            transform: translate3d(100%, 0, 0);
+            transition: transform ease-out $transitionDuration;
+        }
+    }
+
+    &-enter {
+        transform: translate3d(-100%, 0, 0);
+
+        &.reverseSwipe-enter-active {
+            transform: translate3d(0, 0, 0);
+            transition: transform ease-out $transitionDuration;
+        }
+    }
+}
