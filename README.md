@@ -63,7 +63,9 @@ Each element of your menu need to have :
  - a condition in the className to make it active on the right slide
 
 Here is an example :
+```
 <div data-route="/info" data-index="1" onClick={this.handleClick} className={"btn " + (this.props.route == '/info' && this.props.slide == 2?'active':'')}>Contact</div>
+```
 
 #### Dataset attributes
 
