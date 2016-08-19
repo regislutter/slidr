@@ -3,7 +3,7 @@ var PropTypes = React.PropTypes;
 
 function Contact(props) {
     return (
-        <div>Contact</div>
+        <div className="slide">Contact</div>
     )
 };
 

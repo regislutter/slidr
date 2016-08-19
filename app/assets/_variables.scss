@@ -15,7 +15,36 @@ $purple: #B10DC9;
 $black: #111;
 $gray: #AAA;
 $silver: #DDD;
-$white: #FFF;
+$white: #FEFEFE;
+
+// Colors
+$color_bg: #E0EFF1;
+$color_primary: #406D8B;
+$color_primary_light: #90A3B3;
+$color_primary_dark: #0F2869;
+$color_secondary: hsla(156, 23, 84, 1); // #A5D7C3
+$color_secondary_light: hsla(156, 23, 94, 1);
+$color_secondary_dark: hsla(156, 23, 74, 1);
+$color_info: $teal;
+$color_alert: $red;
+$color_warning: $orange;
+$color_success: $green;
+$color_fail: $red;
+$color_cancel: $gray;
 
 // Fonts
 $fontDefault: 'Helvetica Neue', 'Helvetica', 'Verdana', sans-serif;
+
+// Font sizes
+$fsMicro:   11px;
+$fsSmall:   12px;
+$fsDefault: 14px;
+$fsMedium:  16px;
+$fsBig:     18px;
+$fsH6:      20px;
+$fsH5:      24px;
+$fsH4:      28px;
+$fsH3:      32px;
+$fsH2:      36px;
+$fsH1:      48px;
+$fsGiga:    72px;

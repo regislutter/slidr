@@ -3,7 +3,7 @@ var PropTypes = React.PropTypes;
 
 function Patient(props) {
     return (
-        <div>Patient 1</div>
+        <div className="slide">Patient 1</div>
     )
 };
 

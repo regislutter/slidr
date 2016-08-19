@@ -15,7 +15,7 @@ var Main = React.createClass({
         return {
             route: this.props.location.pathname,
             slideIndex: 0,
-            orientation: 'orientation-column' // orientation-column OR orientation-row
+            orientation: 'orientation-row' // orientation-column OR orientation-row
         }
     },
     handleClickMenu: function(route, index) {

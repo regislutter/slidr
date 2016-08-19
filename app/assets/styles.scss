@@ -1,6 +1,9 @@
 @import './variables';
+@import './grid';
 
 body, html {
+    background-color: $color_bg;
+    color: $black;
     font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', sans-serif;
 }
 
@@ -19,21 +22,36 @@ body, html {
     }
 }
 
+/**
+* HEADER / MENU
+*/
+$headerSize: 80px;
 header {
+    background-color: $color_primary_light;
+    border-bottom: 1px solid $color_primary;
+    color: $white;
+
     &.orientation-column {
-        margin-bottom: 15px;
-
         .logo {
-            margin-right: 15px;
+            margin: 0;
+            padding: 0 15px;
         }
-
     }
 
     &.orientation-row {
-        margin-right: 15px;
-
         .logo {
-            margin-bottom: 15px;
+            margin: 0;
+            padding: 15px 0;
+        }
+
+        .btn {
+            border-left: none;
+            border-top: 1px solid $color_primary_dark;
+
+            &:last-child {
+                border-right: none;
+                border-bottom: 1px solid $color_primary_dark;
+            }
         }
     }
 
@@ -47,14 +65,31 @@ header {
         }
     }
 
+    .logo {
+        line-height: $headerSize;
+        text-align: center;
+    }
+
     .btn {
         display: block;
-        width: 80px;
-        height: 80px;
-        line-height: 80px;
+        width: $headerSize;
+        height: $headerSize;
+        line-height: $headerSize;
         padding: 0;
         border-radius: 0;
         text-align: center;
+
+        background-color: $color_primary_light;
+        border: none;
+        border-left: 1px solid $color_primary_dark;
+
+        &:last-child {
+            border-right: 1px solid $color_primary_dark;
+        }
+
+        &.active, &:hover {
+            background-color: $color_primary;
+        }
     }
 }
 
@@ -65,18 +100,14 @@ header {
     border: 1px solid $navy;
     border-radius: 3px;
 
-    &.active {
-        background-color: $red;
-    }
-
     &-success {
-        background-color: $green;
+        background-color: $color_success;
         border-color: $olive;
     }
     &-cancel {
-        color: $red;
+        color: $color_fail;
         background-color: transparent;
-        border-color: $gray;
+        border-color: $color_cancel;
     }
 }
 
@@ -102,16 +133,10 @@ header {
 }
 
 .slide {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding-top: 100px;
-    width: 100vw;
-    height: 100vh;
+    padding: 30px;
 }
 
+/* Animation */
 $transitionDuration: 500ms;
 .swipe {
     &-leave {

@@ -3,7 +3,7 @@ var PropTypes = React.PropTypes;
 
 function Safety(props) {
     return (
-        <div>Safety</div>
+        <div className="slide">Safety</div>
     )
 };
 
