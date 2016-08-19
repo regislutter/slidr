@@ -23,7 +23,7 @@ var Menu = React.createClass({
                     <div data-route="/" data-index="0" onClick={this.handleClick} className={"btn " + (this.props.route == '/' && this.props.slide == 0?'active':'')}>Home</div>
                     <div data-route="/" data-index="1" onClick={this.handleClick} className={"btn " + (this.props.route == '/' && this.props.slide == 1?'active':'')}>Safety</div>
                     <div data-route="/" data-index="2" onClick={this.handleClick} className={"btn " + (this.props.route == '/' && this.props.slide == 2?'active':'')}>Contact</div>
-                    <div data-route="/patient" data-index="0" onClick={this.handleClick} className={"btn " + (this.props.route == '/patient' && this.props.slide == 0?'active':'')}>Patients</div>
+                    <div data-route="/patient" data-index="0" onClick={this.handleClick} className={"btn " + (this.props.route == '/patient'?'active':'')}>Patients</div>
                 </div>
             </header>
         )
