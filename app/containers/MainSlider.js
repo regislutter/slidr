@@ -13,7 +13,7 @@ var MainSlider = React.createClass({
     },
     getDefaultProps: function() {
         return {
-            slideStyle: {height: '100vh', width: '100vw'}
+            slideStyle: {width: '100vw', height: '100%'}
         }
     },
     render: function () {

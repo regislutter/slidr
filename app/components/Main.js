@@ -15,7 +15,7 @@ var Main = React.createClass({
         return {
             route: this.props.location.pathname,
             slideIndex: 0,
-            orientation: 'orientation-row' // orientation-column OR orientation-row
+            orientation: 'orientation-column' // orientation-column OR orientation-row
         }
     },
     handleClickMenu: function(route, index) {
@@ -42,7 +42,7 @@ var Main = React.createClass({
                     transitionName="appear"
                     transitionEnterTimeout={500}
                     transitionLeaveTimeout={500} >
-                    {React.cloneElement(this.props.children, {key: segment, slide: this.state.slideIndex, onChangeIndex: this.handleChangeIndex})}
+                    {React.cloneElement(this.props.children, {key: segment, slide: this.state.slideIndex, onChangeIndex: this.handleChangeIndex, slideStyle: (this.state.orientation == 'orientation-row'?{height: '100vh'}:{width: '100vw', height: '100%'})})}
                 </ReactCSSTransitionGroup>
             </div>
         )

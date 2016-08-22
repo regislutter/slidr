@@ -1,12 +1,28 @@
 var React = require('react');
-var PropTypes = React.PropTypes;
+var SwipeableViews = require('react-swipeable-views').default;
+/* Slides */
+var ContactInfo = require('./ContactInfo');
+var ContactMap = require('./ContactMap');
 
-function Contact(props) {
-    return (
-        <div className="slide">Contact</div>
-    )
-};
+var Contact = React.createClass({
+    propTypes: {},
+    handleSwitching: function (index, type) {
+        console.log('handleSwitching: ', index, type);
 
-Contact.propTypes = {}
+    },
+    render: function () {
+        return (
+            <div className="slide">
+                <h1>Contact</h1>
+                <div className="mini-slider">
+                    <SwipeableViews onSwitching={this.handleSwitching}>
+                        <ContactInfo />
+                        <ContactMap />
+                    </SwipeableViews>
+                </div>
+            </div>
+        )
+    }
+});
 
 module.exports = Contact;
