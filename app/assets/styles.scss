@@ -20,6 +20,20 @@ body, html {
     &.orientation-row {
         flex-direction: row;
     }
+
+    > * {
+        flex: 1 1 auto;
+    }
+    > header {
+        flex-grow: 0;
+    }
+    > span {
+        height: 100%;
+
+        > div > div {
+            height: 100% !important;
+        }
+    }
 }
 
 /**
@@ -132,8 +146,13 @@ header {
     }
 }
 
+// Slides and sliders
 .slide {
     padding: 30px;
+}
+
+.mini-slider {
+    border: 1px solid $black;
 }
 
 /* Animation */
