@@ -5,7 +5,8 @@
 var React = require('react');
 var Menu = require('./Menu');
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
-require("../assets/styles.scss");
+require('bootstrap-loader');
+require("../assets/sass/styles.scss");
 
 var Main = React.createClass({
     contextTypes: {

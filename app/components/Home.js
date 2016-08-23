@@ -12,6 +12,7 @@ var Home = React.createClass({
             <div className="slide">
                 <h1>Github Battle</h1>
                 <p className="lead">Hey!</p>
+                <span className="label label-success">Success</span>
                 <Link to="/playerOne">
                     <button type="button" className="btn">Get started</button>
                 </Link>

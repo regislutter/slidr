@@ -1,0 +1,20 @@
+---
+bootstrapVersion: 4
+
+# You can use comments here
+useFlexbox: true
+loglevel: debug
+
+styleLoaders:
+  - style
+  - css?sourceMap
+  - postcss
+  - sass?sourceMap
+
+styles: true
+#  normalize: true
+#  print: true
+
+scripts: true
+#  alert: true
+#  button: true
