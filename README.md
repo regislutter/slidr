@@ -6,6 +6,10 @@
 - Run the command `npm run start`
 - Visit `http://localhost:8080`
 
+## Bootstrap 4 (alpha)
+
+This project use Bootstrap 4 (alpha) : [http://v4-alpha.getbootstrap.com/layout/overview/]
+
 ## What are flows and slides ?
 
 Slides are simple page between which you can slide by swiping on touch devices or by click in the menu.
