@@ -3,7 +3,7 @@ var PropTypes = React.PropTypes;
 
 function ContactMap(props) {
     return (
-        <div className="slide">Contact Map</div>
+        <div className="slide">Map</div>
     )
 };
 

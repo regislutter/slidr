@@ -19,9 +19,10 @@ var MainSlider = React.createClass({
     render: function () {
         return (
             <SwipeableViews index={this.props.slide} onChangeIndex={this.props.onChangeIndex} style={this.props.slideStyle} slideStyle={this.props.slideStyle}>
-                <Home />
+                <Home onGoTo={this.props.onChangeSlide} />
                 <Safety />
                 <Contact />
+                <Safety />
             </SwipeableViews>
         )
     }

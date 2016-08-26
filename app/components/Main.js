@@ -43,7 +43,7 @@ var Main = React.createClass({
                     transitionName="appear"
                     transitionEnterTimeout={500}
                     transitionLeaveTimeout={500} >
-                    {React.cloneElement(this.props.children, {key: segment, slide: this.state.slideIndex, onChangeIndex: this.handleChangeIndex, slideStyle: (this.state.orientation == 'orientation-row'?{height: '100vh'}:{width: '100vw', height: '100%'})})}
+                    {React.cloneElement(this.props.children, {key: segment, slide: this.state.slideIndex, onChangeIndex: this.handleChangeIndex, onChangeSlide: this.handleClickMenu, slideStyle: (this.state.orientation == 'orientation-row'?{height: '100vh'}:{width: '100vw', height: '100%'})})}
                 </ReactCSSTransitionGroup>
             </div>
         )

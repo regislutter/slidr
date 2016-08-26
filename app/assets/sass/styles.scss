@@ -1,5 +1,6 @@
 @import 'variables';
-@import 'grid';
+
+$headerSize: 80px;
 
 body, html {
     background-color: $color_bg;
@@ -21,6 +22,12 @@ body, html {
         flex-direction: row;
     }
 
+    &.orientation-column {
+        .slide {
+            margin-bottom: $headerSize;
+        }
+    }
+
     > * {
         flex: 1 1 auto;
     }
@@ -39,10 +46,9 @@ body, html {
 /**
 * HEADER / MENU
 */
-$headerSize: 80px;
 header {
     background-color: $color_primary_light;
-    border-bottom: 1px solid $color_primary;
+    outline: 1px solid $color_primary;
     color: $white;
 
     &.orientation-column {
@@ -107,23 +113,33 @@ header {
     }
 }
 
-.btn {
-    padding: 10px 30px;
-    color: $white;
-    background-color: $blue;
-    border: 1px solid $navy;
-    border-radius: 3px;
-
-    &-success {
-        background-color: $color_success;
-        border-color: $olive;
-    }
-    &-cancel {
-        color: $color_fail;
-        background-color: transparent;
-        border-color: $color_cancel;
-    }
+// Slides and sliders
+.slide {
+    padding: 30px;
 }
+
+.mini-slider {
+    padding: 0 !important;
+}
+
+//
+//.btn {
+//    padding: 10px 30px;
+//    color: $white;
+//    background-color: $blue;
+//    border: 1px solid $navy;
+//    border-radius: 3px;
+//
+//    &-success {
+//        background-color: $color_success;
+//        border-color: $olive;
+//    }
+//    &-cancel {
+//        color: $color_fail;
+//        background-color: transparent;
+//        border-color: $color_cancel;
+//    }
+//}
 
 /** Transition animations */
 .appear {
@@ -144,15 +160,6 @@ header {
             transition: opacity ease-out 500ms;
         }
     }
-}
-
-// Slides and sliders
-.slide {
-    padding: 30px;
-}
-
-.mini-slider {
-    border: 1px solid $black;
 }
 
 /* Animation */

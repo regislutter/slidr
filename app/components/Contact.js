@@ -6,16 +6,12 @@ var ContactMap = require('./ContactMap');
 
 var Contact = React.createClass({
     propTypes: {},
-    handleSwitching: function (index, type) {
-        console.log('handleSwitching: ', index, type);
-
-    },
     render: function () {
         return (
             <div className="slide">
                 <h1>Contact</h1>
-                <div className="mini-slider">
-                    <SwipeableViews onSwitching={this.handleSwitching}>
+                <div className="mini-slider jumbotron">
+                    <SwipeableViews>
                         <ContactInfo />
                         <ContactMap />
                     </SwipeableViews>
