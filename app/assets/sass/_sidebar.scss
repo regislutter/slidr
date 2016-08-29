@@ -1,6 +1,6 @@
 .sidebar {
     min-width: 300px;
-    background-color: $color_primary;
+    background-color: $color_primary_dark;
 
     h2 {
         padding: 20px 30px;
@@ -22,7 +22,7 @@
             }
 
             &.active {
-                background-color: $color_primary_dark;
+                background-color: $color_primary;
             }
         }
     }

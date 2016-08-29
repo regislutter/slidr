@@ -6,8 +6,24 @@ $headerSize: 80px;
 
 body, html {
     background-color: $color_bg;
-    color: $black;
+    color: $color_primary_light;
     font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', sans-serif;
+
+    h1, h2, h3, h4, h5, h6 {
+        color: $white;
+    }
+
+    p, span, ul, li {
+        color: $color_primary_light;
+    }
+
+    a {
+        color: $color_primary;
+
+        &:hover {
+            color: $color_secondary;
+        }
+    }
 }
 
 .main-container {
@@ -49,8 +65,8 @@ body, html {
 * HEADER / MENU
 */
 header {
-    background-color: $color_primary_light;
-    outline: 1px solid $color_primary;
+    background-color: $color_primary_dark;
+    outline: 1px solid $black;
     color: $white;
 
     &.orientation-column {
@@ -101,9 +117,9 @@ header {
         border-radius: 0;
         text-align: center;
 
-        background-color: $color_primary_light;
+        background-color: $color_primary_dark;
         border: none;
-        border-left: 1px solid $color_primary_dark;
+        border-left: 1px solid $black;
 
         &:last-child {
             border-right: 1px solid $color_primary_dark;
