@@ -11,11 +11,13 @@ var MainSlider = React.createClass({
             slideIndex: 0
         }
     },
+
     getDefaultProps: function() {
         return {
             slideStyle: {width: '100%', height: '100%'}
         }
     },
+
     render: function () {
         return (
             <SwipeableViews index={this.props.slide} onChangeIndex={this.props.onChangeIndex} style={this.props.slideStyle} slideStyle={this.props.slideStyle}>

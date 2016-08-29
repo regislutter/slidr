@@ -11,11 +11,17 @@ var MenuSidebar = React.createClass({
         };
     },
 
+    getDefaultProps() {
+        return {
+            closeMenuOnClick: true,
+        };
+    },
+
     onSetSidebarOpen: function(open) {
         this.setState({sidebarOpen: open, shadowed: open});
     },
 
-    // Issue testing in Chrome - Device mode resize instead of making responsive
+    // TODO Issue testing in Chrome's device mode : resize instead of making responsive
     //componentWillMount: function() {
     //    var mql = window.matchMedia("(min-width: 800px)");
     //    console.log(mql.matches);
@@ -31,8 +37,25 @@ var MenuSidebar = React.createClass({
     //    this.setState({sidebarDocked: this.state.mql.matches});
     //},
 
+    handleClickMenu: function(route, location) {
+        if(this.state.sidebarOpen) {
+            this.props.onChangeSlide(route, location);
+            this.onSetSidebarOpen(!this.props.closeMenuOnClick);
+        }
+    },
+
     render: function() {
-        var sidebarContent = <div>Sidebar content</div>;
+        var sidebarContent = <div className={"sidebar"}>
+            <h2>Menu</h2>
+            <ul>
+                <li onClick={() => this.handleClickMenu('/', 0)} className={(this.props.route == '/' && this.props.slide == 0?'active':'')}>Home</li>
+                <li onClick={() => this.handleClickMenu('/', 1)} className={(this.props.route == '/' && this.props.slide == 1?'active':'')}>Safety</li>
+                <li onClick={() => this.handleClickMenu('/', 2)} className={(this.props.route == '/' && this.props.slide == 2?'active':'')}>Contact</li>
+                <li onClick={() => this.handleClickMenu('/', 3)} className={(this.props.route == '/' && this.props.slide == 3?'active':'')}>Safety 2</li>
+                <li onClick={() => this.handleClickMenu('/patient', 0)} className={(this.props.route == '/patient' && this.props.slide == 0?'active':'')}>Patient 1</li>
+                <li onClick={() => this.handleClickMenu('/patient', 1)} className={(this.props.route == '/patient' && this.props.slide == 1?'active':'')}>Patient 2</li>
+            </ul>
+        </div>;
 
         var style = {
             root: {
@@ -52,7 +75,7 @@ var MenuSidebar = React.createClass({
                 WebkitTransition: '-webkit-transform .3s ease-out',
                 willChange: 'transform',
                 overflowY: 'auto',
-                backgroundColor: '#FFF',
+                backgroundColor: '#406D8B',
             },
             content: {
                 position: 'absolute',
@@ -89,6 +112,8 @@ var MenuSidebar = React.createClass({
                      docked={this.state.sidebarDocked}
                      onSetOpen={this.onSetSidebarOpen}
                      shadow={this.state.shadowed}
+                     touchHandleWidth={30}
+                     dragToggleDistance={40}
                      styles={style}>
                 {this.props.children}
             </Sidebar>

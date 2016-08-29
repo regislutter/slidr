@@ -1,0 +1,28 @@
+.sidebar {
+    background-color: $color_primary;
+
+    h2 {
+        padding: 20px 30px;
+        text-align: center;
+        color: $white;
+    }
+
+    ul {
+        padding: 0;
+        list-style-type: none;
+
+        li {
+            padding: 7px 15px;
+            border-top: 1px solid $color_primary_light;
+            color: $white;
+
+            &:last-child {
+                border-bottom: 1px solid $color_primary_light;
+            }
+
+            &.active {
+                background-color: $color_primary_dark;
+            }
+        }
+    }
+}
