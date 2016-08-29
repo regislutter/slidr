@@ -37,9 +37,9 @@ var MenuSidebar = React.createClass({
     //    this.setState({sidebarDocked: this.state.mql.matches});
     //},
 
-    handleClickMenu: function(route, location) {
+    handleClickMenu: function(route, index) {
         if(this.state.sidebarOpen) {
-            this.props.onChangeSlide(route, location);
+            this.props.onChangeSlide(route, index);
             this.onSetSidebarOpen(!this.props.closeMenuOnClick);
         }
     },
@@ -52,8 +52,8 @@ var MenuSidebar = React.createClass({
                 <li onClick={() => this.handleClickMenu('/', 1)} className={(this.props.route == '/' && this.props.slide == 1?'active':'')}>Safety</li>
                 <li onClick={() => this.handleClickMenu('/', 2)} className={(this.props.route == '/' && this.props.slide == 2?'active':'')}>Contact</li>
                 <li onClick={() => this.handleClickMenu('/', 3)} className={(this.props.route == '/' && this.props.slide == 3?'active':'')}>Safety 2</li>
-                <li onClick={() => this.handleClickMenu('/patient', 0)} className={(this.props.route == '/patient' && this.props.slide == 0?'active':'')}>Patient 1</li>
-                <li onClick={() => this.handleClickMenu('/patient', 1)} className={(this.props.route == '/patient' && this.props.slide == 1?'active':'')}>Patient 2</li>
+                <li onClick={() => this.handleClickMenu('/user', 0)} className={(this.props.route == '/user' && this.props.slide == 0?'active':'')}>User 1</li>
+                <li onClick={() => this.handleClickMenu('/user', 1)} className={(this.props.route == '/user' && this.props.slide == 1?'active':'')}>User 2</li>
             </ul>
         </div>;
 

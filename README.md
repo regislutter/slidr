@@ -31,7 +31,7 @@ var routes = (
     <Router history={hashHistory}>
         <Route path="/" component={Main}>
             <IndexRoute component={MainSlider} />
-            <Route path="patient" component={PatientSlider} />
+            <Route path="user" component={UserSlider} />
         </Route>
     </Router>
 );

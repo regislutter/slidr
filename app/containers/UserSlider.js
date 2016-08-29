@@ -1,10 +1,10 @@
 var React = require('react');
 var SwipeableViews = require('react-swipeable-views').default;
 /* Slides */
-var Patient = require('../components/Patient');
-var Patient2 = require('../components/Patient2');
+var User = require('../components/User');
+var User2 = require('../components/User2');
 
-var PatientSlider = React.createClass({
+var UserSlider = React.createClass({
     getInitialState: function () {
         return {
             slideIndex: 0
@@ -18,11 +18,11 @@ var PatientSlider = React.createClass({
     render: function () {
         return (
             <SwipeableViews index={this.props.slide} onChangeIndex={this.props.onChangeIndex} style={this.props.slideStyle} slideStyle={this.props.slideStyle}>
-                <Patient />
-                <Patient2 />
+                <User />
+                <User2 />
             </SwipeableViews>
         )
     }
 });
 
-module.exports = PatientSlider;
+module.exports = UserSlider;
