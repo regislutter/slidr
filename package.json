@@ -38,6 +38,7 @@
     "html-webpack-plugin": "^2.22.0",
     "node-sass": "^3.8.0",
     "postcss-loader": "^0.10.1",
+    "react-sidebar": "^2.2.1",
     "resolve-url-loader": "^1.6.0",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",

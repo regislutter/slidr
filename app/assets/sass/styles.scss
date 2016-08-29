@@ -34,7 +34,7 @@ body, html {
     > header {
         flex-grow: 0;
     }
-    > span {
+    > span, > div > div > span {
         height: 100%;
 
         > div > div {
