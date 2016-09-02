@@ -19,11 +19,12 @@ var Main = React.createClass({
         return {
             route: this.props.location.pathname,
             slideIndex: 0,
-            orientation: 'orientation-row' // orientation-column OR orientation-row
+            orientation: 'orientation-column' // orientation-column OR orientation-row
         }
     },
 
     handleClickMenu: function(route, index) {
+        console.log(route, index)
         if(route !== this.state.route) {
             this.context.router.push(route);
         }
@@ -44,7 +45,7 @@ var Main = React.createClass({
         var segment = path.split('/')[1] || 'root';
         return (
             <div className={"main-container " + this.state.orientation}>
-                <MenuSidebar route={this.state.route} slide={this.state.slideIndex} onChangeSlide={this.handleClickMenu}>
+                <MenuSidebar route={this.state.route} slide={this.state.slideIndex} orientation={this.state.orientation} onChangeSlide={this.handleClickMenu}>
                     <Menu route={this.state.route} slide={this.state.slideIndex} orientation={this.state.orientation} onClickMenu={this.handleClickMenu} />
                     <ReactCSSTransitionGroup
                         transitionName="appear"

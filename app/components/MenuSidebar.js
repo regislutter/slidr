@@ -79,6 +79,8 @@ var MenuSidebar = React.createClass({
             },
             content: {
                 position: 'absolute',
+                display: 'flex',
+                flexDirection: this.props.orientation=='orientation-column'?'column':'row',
                 top: 0,
                 left: 0,
                 right: 0,
