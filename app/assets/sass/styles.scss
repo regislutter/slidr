@@ -6,7 +6,7 @@ $headerSize: 80px;
 
 body, html {
     background-color: $color_bg;
-    color: $color_primary_light;
+    color: $color_font;
     font-family: 'Helvetica Neue', 'Helvetica', 'Verdana', sans-serif;
 
     h1, h2, h3, h4, h5, h6 {
@@ -14,7 +14,7 @@ body, html {
     }
 
     p, span, ul, li {
-        color: $color_primary_light;
+        color: $color_font;
     }
 
     a {
@@ -59,6 +59,26 @@ body, html {
             height: 100% !important;
         }
     }
+
+    // Override Bootstrap 4
+    $color_border: #374058;
+
+    .jumbotron {
+        background-color: #373a41;
+    }
+
+    .card, .list-group-item {
+        background-color: #303645;
+        border: 1px solid $color_border;
+    }
+
+    .breadcrumb {
+        background-color: #373a41;
+
+        > .active {
+            color: $color_font;
+        }
+    }
 }
 
 /**
@@ -82,15 +102,15 @@ header {
             padding: 15px 0;
         }
 
-        .btn {
-            border-left: none;
-            border-top: 1px solid $color_primary_dark;
-
-            &:last-child {
-                border-right: none;
-                border-bottom: 1px solid $color_primary_dark;
-            }
-        }
+        //.btn {
+        //    border-left: none;
+        //    border-top: 1px solid $color_primary_dark;
+        //
+        //    &:last-child {
+        //        border-right: none;
+        //        border-bottom: 1px solid $color_primary_dark;
+        //    }
+        //}
     }
 
     .flex-container {
@@ -108,27 +128,27 @@ header {
         text-align: center;
     }
 
-    .btn {
-        display: block;
-        width: $headerSize;
-        height: $headerSize;
-        line-height: $headerSize;
-        padding: 0;
-        border-radius: 0;
-        text-align: center;
-
-        background-color: $color_primary_dark;
-        border: none;
-        border-left: 1px solid $black;
-
-        &:last-child {
-            border-right: 1px solid $color_primary_dark;
-        }
-
-        &.active, &:hover {
-            background-color: $color_primary;
-        }
-    }
+    //.btn {
+    //    display: block;
+    //    width: $headerSize;
+    //    height: $headerSize;
+    //    line-height: $headerSize;
+    //    padding: 0;
+    //    border-radius: 0;
+    //    text-align: center;
+    //
+    //    background-color: $color_primary_dark;
+    //    border: none;
+    //    border-left: 1px solid $black;
+    //
+    //    &:last-child {
+    //        border-right: 1px solid $color_primary_dark;
+    //    }
+    //
+    //    &.active, &:hover {
+    //        background-color: $color_primary;
+    //    }
+    //}
 }
 
 // Slides and sliders
